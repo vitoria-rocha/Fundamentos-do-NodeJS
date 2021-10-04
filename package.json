@@ -1,0 +1,11 @@
+{
+  "name": "fundamentos-do-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vitoria-rocha/Fundamentos-do-NodeJS.git",
+  "author": "vitoria-rocha <vitoria.rocha1206@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
