@@ -117,9 +117,27 @@ REGRAS:
   
   - 4xx
     - Erro do cliente
+
         400 - Bad request
+
         401 - Unauthorized
+
         403 - Forbiden
+
         404 - Not found
+        
         422 - Unprocessable Entity
 
+## Tipos de parametros
+
+- Route Params
+
+  Identificar recursos para poder buscar, editar ou deletar.
+
+- Query Params
+
+  Paginaçao, filtros
+  courses?page=1&order=asc
+
+- Body Params
+  Os objetos de inserçao/alteraçao (json)
