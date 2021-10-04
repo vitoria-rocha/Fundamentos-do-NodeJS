@@ -23,11 +23,19 @@ app.post("/account", (request, response) => {
 
   const id = uuidv4();
   
+  const customerAlreadyExists = customers.some(
+    (customer => customer.cpf === cpf)
+  );
+
+  if(customerAlreadyExists) {
+    return response.status(400).json({error: "Customer already exists!"});
+  }
+
   //bd fake, inserindo dados no array
   customers.push({
     cpf,
     name,
-    id,
+    id: uuidv4(),
     statement: [],
   });
 
