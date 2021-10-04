@@ -1,30 +1,39 @@
 //apenas importando a funçao do express
+const express = require('express');
+const { v4: uuidv4 } = require("uuid");
 const { request, response } = require('express');
-const express = require ('express');
 
 const app = express();
 
-//Metodos HTTP
-app.get("/courses", (request, response) => {
-  return response.json(["Curso 1", "Curso 2", "Curso 3"]);  
-});
+app.use(express.json());
 
-app.post("/courses", (request, response) =>{
-  return response.json(["Curso 1", "Curso 2", "Curso 3", "Curso 4"]); 
-});
+//array vazio
+const customers = [];
 
-app.put("/courses/:id", (request, response) =>{
-  return response.json(["Curso 6", "Curso 2", "Curso 3", "Curso 4"]);
-});
+/* 
+cpf - string
+name - string 
+id - uuid
+statement []
+ */
 
-app.patch("/courses/:id", (request, response) =>{
-  return response.json(["Curso 6", "Curso 7", "Curso 3", "Curso 4"]);
-});
 
-app.delete("/courses/:id", (request, response) => {
-  return response.json(["Curso 6", "Curso 2", "Curso 4"]);
-});
+app.post("/account", (request, response) => {
+  const { cpf, name } = request.body;
 
+  const id = uuidv4();
+  
+  //bd fake, inserindo dados no array
+  customers.push({
+    cpf,
+    name,
+    id,
+    statement: [],
+  });
+
+  //retornando q deu tudo certo
+  return response.status(201).send();
+});
 
 //funçao listen fala pro express startar a aplicaçao
 app.listen(8080);
