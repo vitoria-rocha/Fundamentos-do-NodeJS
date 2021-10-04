@@ -2,7 +2,7 @@
 
 ### Requisitos
 
-- [ ] Criar conta
+- [ x ] Criar conta
 - [ ] Buscar extrato bancario do cliente
 - [ ] Realizar deposito
 - [ ] Realizar saque
@@ -15,7 +15,7 @@
 
 Nao deve ser possivel:
 
-- [ ] Cadastrar uma conta com CPF ja existente
+- [ x ] Cadastrar uma conta com CPF ja existente
 - [ ] Fazer deposito em uma conta nao existente
 - [ ] Buscar extrato em uma conta nao existente
 - [ ] Fazer saque em uma conta nao existente
