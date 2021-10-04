@@ -5,7 +5,13 @@
   "repository": "git@github.com:vitoria-rocha/Fundamentos-do-NodeJS.git",
   "author": "vitoria-rocha <vitoria.rocha1206@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon home/vitoria/projetos/fundamentos-do-nodejs/src/index.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
