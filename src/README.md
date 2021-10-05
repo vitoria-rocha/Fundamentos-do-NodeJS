@@ -6,10 +6,10 @@
 - [ x ] Buscar extrato bancario do cliente
 - [ x ] Realizar deposito
 - [ x ] Realizar saque
-- [ ] Buscar extrato do cliente por data
-- [ ] Atualizar dados da conta do cliente
-- [ ] Obter dados da conta do cliente
-- [ ] Deletar uma conta
+- [ x ] Buscar extrato do cliente por data
+- [ x ] Atualizar dados da conta do cliente
+- [ x ] Obter dados da conta do cliente
+- [ x ] Deletar uma conta
 
 ## Regras de negocio
 
@@ -19,5 +19,5 @@ Nao deve ser possivel:
 - [ x ] Fazer deposito em uma conta nao existente
 - [ x ] Buscar extrato em uma conta nao existente
 - [ x ] Fazer saque em uma conta nao existente
-- [ ] Excluir uma conta nao existente
-- [ ] Fazer saque quando o aldo for insuficiente
+- [ x ] Excluir uma conta nao existente
+- [ x ] Fazer saque quando o saldo for insuficiente
