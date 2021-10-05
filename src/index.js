@@ -62,5 +62,22 @@ app.get("/statement/", verifyExistsAccountCPF, (request, response) => {
   return response.json(customer.statement);
 });
 
+app.post("/deposit", verifyExistsAccountCPF, (request, response) => {
+  const { description, amount } = request.body;
+
+  const { customer } = request;
+
+  const statementeOperation = {
+    description,
+    amount,
+    created_at: new Date(),
+    type: "credit"
+  };
+
+  customer.statement.push(statementeOperation);
+
+  return response.status(201).send();
+});
+
 //funçao listen fala pro express startar a aplicaçao
 app.listen(8080);
