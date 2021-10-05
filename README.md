@@ -163,3 +163,10 @@ app.patch("/courses/:id", (request, response) =>{
 app.delete("/courses/:id", (request, response) => {
   return response.json(["Curso 6", "Curso 2", "Curso 4"]);
 });
+
+
+## Middleware
+
+Meio, uma funçao que fica entre o request e o response. Eh usado pra fazer validacao de token, usuario etc.
+
+Sempre recebe request, response e next
